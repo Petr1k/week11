@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         //console.log("Random recipe requested");
         
-        const recipeQuery = 'SELECT id, recipename, imageURL, instructions FROM recipe ORDER BY RANDOM() LIMIT 1;'
+        const recipeQuery = 'SELECT id, recipename, imageurl, instructions FROM recipe ORDER BY RANDOM() LIMIT 1;'
         const recipeResult = await db.query(recipeQuery);
         const selectedRecipe = recipeResult.rows[0];
         
