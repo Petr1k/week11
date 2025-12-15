@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
         
         res.json({
             recipe: selectedRecipe.recipename,
+            imageurl: selectedRecipe.imageurl,
             instructions: selectedRecipe.instructions,
             ingredients: ingredients
         });
